@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-import { IPet } from "../IPet";
+import { IPet } from "../models/IPet";
 
 // Importing the module 
 const express=require("express") 
@@ -9,7 +9,7 @@ const express=require("express")
 // Creating express Router 
 const router=express.Router()
 
-const filePath = path.join(`${__dirname}/../data/`, 'people.json');
+const filePath = path.join(`${__dirname}/../data/`, 'pets.json');
 let petList: IPet[] = [];
 
 fs.readFile(filePath, (err, data: any) => {
@@ -42,11 +42,12 @@ router.get("/:id", (req, resp) => {
 
 // Add contact
 router.post("/", (req, resp) => {
-    const {name, category, price} = req.body;
+    const {breed, category, price, image, height, isLongMeasure, weight, color,
+        lifeExpectancy, shortDescription, description} = req.body;
 
-    if (!name) {
+    if (!breed) {
         resp.status(200);
-        return resp.json({error: 'name is required.'})
+        return resp.json({error: 'breed is required.'})
     }
 
     if (!category) {
@@ -63,9 +64,17 @@ router.post("/", (req, resp) => {
 
     const pet:IPet = {
         id,
-        name,
+        breed,
         category,
-        price
+        price,
+        image, 
+        height, 
+        isLongMeasure,
+        weight, 
+        color,
+        lifeExpectancy, 
+        shortDescription, 
+        description
     }
 
     petList.push(pet);
@@ -79,21 +88,46 @@ router.put("/:id", (req, resp) => {
     if (req.params.id) {
         let petUpdated: IPet | null = null;
 
-        for(let contact of petList) {
-            if (contact.id == req.params.id) {
-                const {name, category, price} = req.body;
+        for(let pet of petList) {
+            if (pet.id == req.params.id) {
+                const {breed, category, price, image, height, isLongMeasure, weight, color,
+                    lifeExpectancy, shortDescription, description} = req.body;
         
-                if (name) {
-                    contact.name = name;
+                if (breed) {
+                    pet.breed = breed;
                 }
                 if (category) {
-                    contact.category = category;
+                    pet.category = category;
                 }
                 if (price) {
-                    contact.price = price;
+                    pet.price = price;
+                }
+                if (image) {
+                    pet.image = image;
+                }
+                if (height) {
+                    pet.height = height;
+                }
+                if (isLongMeasure) {
+                    pet.isLongMeasure = isLongMeasure;
+                }
+                if (color) {
+                    pet.color = color;
+                }
+                if (weight) {
+                    pet.weight = weight;
+                }
+                if (lifeExpectancy) {
+                    pet.lifeExpectancy = lifeExpectancy;
+                }
+                if (shortDescription) {
+                    pet.shortDescription = shortDescription;
+                }
+                if (description) {
+                    pet.description = description;
                 }
 
-                petUpdated = contact;
+                petUpdated = pet;
                 break;
             }
         }
