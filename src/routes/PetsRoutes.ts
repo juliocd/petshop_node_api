@@ -22,8 +22,18 @@ fs.readFile(filePath, (err, data: any) => {
   
 // Return all pets
 router.get("/", (req, resp) => {
+    let result = petList;
+
+    if (req.query.category) {
+        result = result.filter(record => record.category == req.query.category);
+    }
+
+    if (req.query.breed) {
+        result = result.filter(record => record.breed.toLowerCase().match(req.query.breed.toLowerCase()));
+    }
+
     resp.status(200);
-    return resp.json(petList);
+    return resp.json(result);
 });
 
 // Return pet by id
