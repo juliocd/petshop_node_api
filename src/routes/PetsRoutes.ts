@@ -70,6 +70,26 @@ router.post("/", (req, resp) => {
         return resp.json({error: 'price is required.'})
     }
 
+    if (isNaN(price)) {
+        resp.status(200);
+        return resp.json({error: 'price must be a number.'})
+    }
+
+    if (height && isNaN(height)) {
+        resp.status(200);
+        return resp.json({error: 'height must be a number'})
+    }
+
+    if (weight && isNaN(weight)) {
+        resp.status(200);
+        return resp.json({error: 'weight must be a number'})
+    }
+
+    if (lifeExpectancy && isNaN(lifeExpectancy)) {
+        resp.status(200);
+        return resp.json({error: 'lifeExpectancy must be a number'})
+    }
+
     const id = petList.length > 0 ? petList[petList.length - 1].id + 1 : 1;
 
     const pet:IPet = {
@@ -110,12 +130,21 @@ router.put("/:id", (req, resp) => {
                     pet.category = category;
                 }
                 if (price) {
+                    if (isNaN(price)) {
+                        resp.status(200);
+                        return resp.json({error: 'price must be a number.'})
+                    }
+
                     pet.price = price;
                 }
                 if (image) {
                     pet.image = image;
                 }
                 if (height) {
+                    if (isNaN(height)) {
+                        resp.status(200);
+                        return resp.json({error: 'height must be a number.'})
+                    }
                     pet.height = height;
                 }
                 if (isLongMeasure) {
@@ -125,9 +154,17 @@ router.put("/:id", (req, resp) => {
                     pet.color = color;
                 }
                 if (weight) {
+                    if (isNaN(weight)) {
+                        resp.status(200);
+                        return resp.json({error: 'weight must be a number.'})
+                    }
                     pet.weight = weight;
                 }
                 if (lifeExpectancy) {
+                    if (isNaN(lifeExpectancy)) {
+                        resp.status(200);
+                        return resp.json({error: 'lifeExpectancy must be a number.'})
+                    }
                     pet.lifeExpectancy = lifeExpectancy;
                 }
                 if (shortDescription) {

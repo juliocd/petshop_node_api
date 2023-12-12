@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "firstName": "Cesar",
+        "lastName": "Diaz",
+        "phoneNumber": 3128839099,
+        "address": "2341 Grand Ave",
+        "state": "MN",
+        "zipCode": "55100",
+        "appointmentDate": "12/14/2024",
+        "appointmentTime": "10:00 AM",
+        "petId": 2
+    },
+    {
+        "id": 2,
+        "firstName": "Ana",
+        "lastName": "Smit",
+        "phoneNumber": 3198839000,
+        "address": "332 Ashland Ave",
+        "state": "MN",
+        "zipCode": "55104",
+        "appointmentDate": "12/15/2024",
+        "appointmentTime": "11:00 AM",
+        "petId": 1
+    },
+    {
+        "id": 3,
+        "firstName": "Paul",
+        "lastName": "Royal",
+        "phoneNumber": 4328839092,
+        "address": "900 Swir Ave",
+        "state": "MN",
+        "zipCode": "55100",
+        "appointmentDate": "12/14/2024",
+        "appointmentTime": "4:00 PM",
+        "petId": 1
+    },
+    {
+        "id": 4,
+        "firstName": "Selena",
+        "lastName": "Gomez",
+        "phoneNumber": 4128839097,
+        "address": "1000 Park Ave",
+        "state": "MN",
+        "zipCode": "55133",
+        "appointmentDate": "12/14/2024",
+        "appointmentTime": "09:00 AM",
+        "petId": 10
+    }
+]

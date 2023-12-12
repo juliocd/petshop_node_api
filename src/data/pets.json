@@ -2,7 +2,7 @@
     {
         "id": 1,
         "price": 450.23,
-        "image": "001.jpeg",
+        "image": "001.jpg",
         "category": 1,
         "breed": "Airedale Terrier",
         "height": 23,
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "price": 302.9,
-        "image": "002.jpeg",
+        "image": "002.jpg",
         "category": 1,
         "breed": "German Shepherd Dog",
         "height": 25,
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "price": 200,
-        "image": "003.jpeg",
+        "image": "003.jpg",
         "category": 1,
         "breed": "Labrador Retriever",
         "height": 23,
@@ -41,7 +41,7 @@
     {
         "id": 4,
         "price": 602,
-        "image": "004.jpeg",
+        "image": "004.jpg",
         "category": 2,
         "breed": "American Bobtail",
         "height": 9,
@@ -54,7 +54,7 @@
     {
         "id": 5,
         "price": 300,
-        "image": "005.jpeg",
+        "image": "005.jpg",
         "category": 2,
         "breed": "American Shorthair",
         "height": 10,
@@ -67,7 +67,7 @@
     {
         "id": 6,
         "price": 480,
-        "image": "006.jpeg",
+        "image": "006.jpg",
         "category": 2,
         "breed": "Bengal",
         "height": 10,
@@ -80,7 +80,7 @@
     {
         "id": 7,
         "price": 40,
-        "image": "007.jpeg",
+        "image": "007.jpg",
         "category": 3,
         "breed": "Lovebird",
         "height": 5.5,
@@ -93,7 +93,7 @@
     {
         "id": 8,
         "price": 120,
-        "image": "008.jpeg",
+        "image": "008.jpg",
         "category": 3,
         "breed": "Cockatiel",
         "height": 12,
@@ -106,7 +106,7 @@
     {
         "id": 9,
         "price": 55,
-        "image": "009.jpeg",
+        "image": "009.jpg",
         "category": 4,
         "breed": "Green Snake",
         "height": 20,
@@ -120,7 +120,7 @@
     {
         "id": 10,
         "price": 85,
-        "image": "010.jpeg",
+        "image": "010.jpg",
         "category": 4,
         "breed": "Leopard Gecko",
         "height": 10,
@@ -134,7 +134,7 @@
     {
         "id": 11,
         "price": 34,
-        "image": "011.jpeg",
+        "image": "011.jpg",
         "category": 5,
         "breed": "Betta",
         "height": 3,
@@ -147,7 +147,7 @@
     {
         "id": 12,
         "price": 20,
-        "image": "012.jpeg",
+        "image": "012.jpg",
         "category": 5,
         "breed": "Fantail Goldfish",
         "height": 7,
