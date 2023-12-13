@@ -20,7 +20,6 @@ fs.readFile(filePath, (err, data: any) => {
     }
 })
   
-// Return all pets
 router.get("/", (req, resp) => {
     let result = petList;
 
@@ -36,7 +35,6 @@ router.get("/", (req, resp) => {
     return resp.json(result);
 });
 
-// Return pet by id
 router.get("/:id", (req, resp) => {
     if (req.params.id) {
         const pet = petList.find(c => c.id == req.params.id);
@@ -50,7 +48,6 @@ router.get("/:id", (req, resp) => {
     }
 })
 
-// Add contact
 router.post("/", (req, resp) => {
     const {breed, category, price, image, height, isLongMeasure, weight, color,
         lifeExpectancy, shortDescription, description} = req.body;
@@ -113,7 +110,6 @@ router.post("/", (req, resp) => {
     return resp.json(pet);
 })
 
-// Update pet by id
 router.put("/:id", (req, resp) => {
     if (req.params.id) {
         let petUpdated: IPet | null = null;
@@ -189,7 +185,6 @@ router.put("/:id", (req, resp) => {
     }
 })
 
-// Delete pet by id
 router.delete("/:id", (req, resp) => {
     if (req.params.id) {
         const pet = petList.find(c => c.id == req.params.id);

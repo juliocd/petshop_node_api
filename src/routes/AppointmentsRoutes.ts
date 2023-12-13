@@ -33,7 +33,6 @@ fs.readFile(petsFilePath, (err, data: any) => {
     }
 })
   
-// Return all appointments
 router.get("/", (req, resp) => {
     if (req.query.phoneNumber) {
         let appointments = appointmentList.filter(a => a.phoneNumber == req.query.phoneNumber);
@@ -50,7 +49,6 @@ router.get("/", (req, resp) => {
     return resp.json(appointmentList);
 });
 
-// Return appointment by id
 router.get("/:id", (req, resp) => {
     if (req.params.id) {
         const appointment = appointmentList.find(a => a.id == req.params.id);
@@ -64,7 +62,6 @@ router.get("/:id", (req, resp) => {
     }
 })
 
-// Add appointment
 router.post("/", (req, resp) => {
     const {firstName, lastName, phoneNumber, address, state, zipCode, 
         appointmentDate, appointmentTime, petId} = req.body;
@@ -165,7 +162,6 @@ router.post("/", (req, resp) => {
     return resp.json(appointment);
 })
 
-// Update appointment by id
 router.put("/:id", (req, resp) => {
     if (req.params.id) {
         let appointmentUpdated: IAppointment | null = null;
@@ -237,7 +233,6 @@ router.put("/:id", (req, resp) => {
     }
 })
 
-// Delete appointment by id
 router.delete("/:id", (req, resp) => {
     if (req.params.id) {
         const appointment = appointmentList.find(a => a.id == req.params.id);

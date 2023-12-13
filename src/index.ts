@@ -8,6 +8,7 @@ const cors = require("cors");
 const petsRoutes = require("./routes/PetsRoutes") 
 const appointmentsRoutes = require("./routes/AppointmentsRoutes") 
 const subscribersRoutes = require("./routes/SubscribersRoutes") 
+const merchandiseRoutes = require("./routes/MerchandiseRoutes") 
 
 // Middleware to process JSON data (Express does not process JSON data by default, only text data)
 // Only for Content-Type: application/json
@@ -29,6 +30,7 @@ app.get("/", (req, resp) => {
 app.use("/pets", petsRoutes) 
 app.use("/appointments", appointmentsRoutes) 
 app.use("/subscribers", subscribersRoutes) 
+app.use("/merchandise", merchandiseRoutes) 
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

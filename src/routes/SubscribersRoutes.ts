@@ -17,7 +17,6 @@ router.get("/", (req, resp) => {
     return resp.json(subscriberList);
 });
 
-// Add subscriber
 router.post("/", (req, resp) => {
     const {name, email} = req.body;
 

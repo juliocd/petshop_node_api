@@ -1,0 +1,316 @@
+[
+    {
+        "id": 1,
+        "name": "Dogline Flat Collar",
+        "category" : 2,
+        "petCategory": 1,
+        "description": "It offers high-quality nylon, security, and comfort with reinforced handles.", 
+        "price":  7.99,
+        "image": "1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "KONG AirDog Squeakair Ball Dog Toy",
+        "category" : 1,
+        "petCategory": 1,
+        "description": "It did not just take the classic fetch toy to a new level.", 
+        "price": 1.99,
+        "image": "2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "KONG Cloud Collar For Dogs",
+        "category" : 2,
+        "petCategory": 1,
+        "description": "It is soft, comfortable, and it doesn't interfere with a pet's peripheral vision.", 
+        "price": 7.99,
+        "image": "3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Chuckit! Flying Squirrel Dog Toy",
+        "category" : 2,
+        "petCategory": 1,
+        "description": " Its aerodynamic shape will ride the air for as far as your dog can go.", 
+        "price": 11.51,
+        "image": "4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "KONG Extreme Goodie Bone Dog Toy",
+        "category" : 1,
+        "petCategory": 1,
+        "description": "It is the answer to dogs that love the classic bone shape", 
+        "price": 1.99,
+        "image": "5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "KONG Puppy Toy",
+        "category" : 2,
+        "petCategory": 1,
+        "description": "It is made with our exclusive teething rubber formula", 
+        "price": 12.99,
+        "image": "6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Chuckit! The Whistler Dog Toy",
+        "category" : 1,
+        "petCategory": 1,
+        "description": "Durable rubber ball keeps the game interesting and challenging for your dog ", 
+        "price": 9.47,
+        "image": "7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Chuckit! Ultra Ball Dog Toy",
+        "category" : 1,
+        "petCategory": 1,
+        "description": "These Ultra Balls are compatible with the Chuckit! Ball Launchers", 
+        "price": 7.95,
+        "image": "8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Kong Flyer Rubber Disc Large",
+        "category" : 1,
+        "petCategory": 1,
+        "description": "Extend the fun with this long lasting, flexible and durable flyer from KONG", 
+        "price": 4.99,
+        "image": "9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Pawz Large",
+        "category" : 2,
+        "petCategory": 1,
+        "description": " Device for dog protection and all types of weather", 
+        "price": 7.99,
+        "image": "10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Katziela Safari Sleeper",
+        "category" : 2,
+        "petCategory": 2,
+        "description": "This cushioned bag is cozy as can be! It is so easy to carry and transport.",
+        "price": 49.9,
+        "image": "11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Katziela Voyager Backpack",
+        "category" : 2,
+        "petCategory": 2,
+        "description": "For the active soul in you, is perfect for hikes and outdoor excursions",
+        "price": 74.99,
+        "image": "12.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Earthbath 2-in-1 Mango Tango Conditioning Shampoo",
+        "category" : 2,
+        "petCategory": 2,
+        "description": "Conditioning Shampoo is a shampoo and conditioner in one.", 
+        "price": 4.99,
+        "image": "13.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Kong Refillable Chameleon",
+        "category" : 1,
+        "petCategory": 2,
+        "description": "KONG Refillables Critter Collection's eye-catching pals' re-closable pouches", 
+        "price": 7.99,
+        "image": "14.jpg"
+    },
+    {
+        "id": 15,
+        "name": "KONG Connects Switch Teaser Feathers Cat Toy",
+        "category" : 1,
+        "petCategory": 2,
+        "description": "It calls variety-seeking cats with irresistible fluttering feathers.", 
+        "price": 10.99,
+        "image": "15.jpg"
+    },
+    {
+        "id": 16,
+        "name": "KONG Connects Magnacat",
+        "category" : 1,
+        "petCategory": 2,
+        "description": "KONG Magnicat saves kitties from boredom with magnetized paws.", 
+        "price": 5.99,
+        "image": "16.jpg"
+    },
+    {
+        "id": 17,
+        "name": "cat collar",
+        "category" : 2,
+        "petCategory": 2,
+        "description": " The best protection for your cat", 
+        "price": 8.99,
+        "image": "17.jpg"
+    },
+    {
+        "id": 18,
+        "name": "KONG Ball Cat",
+        "category" : 1,
+        "petCategory": 2,
+        "description": " Ball keeps the game interesting and challenging for your cat", 
+        "price": 4.99,
+        "image": "18.jpg"
+    },
+    {
+        "id": 19,
+        "name": "GPS Cat Tracking Device",
+        "category" : 2,
+        "petCategory": 2, 
+        "description": "The most important thing is that your cat is safe", 
+        "price": 79.99,
+        "image": "19.jpg"
+    },
+    {
+        "id": 20,
+        "name": "automatic Cat balls interactive",
+        "category" : 1,
+        "petCategory": 2,
+        "description": "It is specially designed for active, bored, lazy or autism cats", 
+        "price": 89.99,
+        "image": "20.jpg"
+    },    
+    {
+        "id": 21,
+        "name": "Hanging Double Feeder Metal Bird Cage",
+        "category" : 2,
+        "petCategory": 3,
+        "description": "Easy Detachable Non-Toxic, eco-friendly", 
+        "price": 8.59,
+        "image": "21.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Kingsyard Metal Bird Feeders for Outdoor Hanging",
+        "category" : 2,
+        "petCategory": 3,
+        "description": "2 in 1 Mixed Seed Feeder with Double Cake Cages, Roof and Climate Perch.", 
+        "price": 8.99,
+        "image": "22.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Bird Food Carriers",
+        "category" : 2,
+        "petCategory": 3,
+        "description": "Feeder for Birds, Parrot, Fruits, Vegetables. Made of stainless steel", 
+        "price": 2.99,
+        "image": "23.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Geo Bird Cage for Budgies",
+        "category" : 2,
+        "petCategory": 3,
+        "description": "The geodesic dome forms a light, safe and spacious area for your birds.", 
+        "price": 20.59,
+        "image": "24.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Wooden Outdoor Bird Cage",
+        "category" : 2,
+        "petCategory": 3,
+        "description": "Rain or shine, this wooden bird cage will stay strong, outlasting weather", 
+        "price": 50.99,
+        "image": "25.jpg"
+    },
+    {
+        "name": "Daotaili Reptile Humidifiers",
+        "category" : 2,
+        "petCategory": 4,
+        "description": " Reptile Fogger, Reptile Misting System with 360 Adjustable Spray Nozzles.", 
+        "price": 29.99,
+        "image": "26.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Reptile Turtle Aquarium Tank Turtle Vivarium",
+        "category" : 2,
+        "petCategory": 4,
+        "description": " Aquarium Turtle Vivarium Box Reptile Tank with Support Ramp", 
+        "price": 10.99,
+        "image": "27.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Natural Forest Branches for Reptiles 30 cm Exo Terra",
+        "category" : 2,
+        "petCategory": 4,
+        "description": "It offers an environment as close as possible to the natural habitat.", 
+        "price": 5.99,
+        "image": "28.jpg"
+    },
+    {
+        "id": 29,
+        "name": "GDK Turtle Platform",
+        "category" : 2,
+        "petCategory": 4,
+        "description": "Platform for reptiles and solar games.", 
+        "price": 7.99,
+        "image": "29.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Lizard Hideout Tent Sleeping Bed for Reptiles",
+        "category" : 2,
+        "petCategory": 4,
+        "description": " Reptile Sleeping Bed, Soft and Warm, Machine Washable with Cartoon Pattern", 
+        "price": 8.99,
+        "image": "30.jpg"
+    },
+    {
+        "id": 31,
+        "name": "aquarium cooler",
+        "category" : 2,
+        "petCategory": 5,
+        "description": " Wind aquarium cooling fan, this fish tank cooler has 2 wind speeds", 
+        "price": 39.99,
+        "image": "31.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Aqueon Betta Fish Tank Starter Kit",
+        "category" : 2,
+        "petCategory": 5,
+        "description": " Includes a Betta separator for two Betta in one aquarium.", 
+        "price": 45.99,
+        "image": "32.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Ultechnovo Fish Tank Accessory",
+        "category" : 2,
+        "petCategory": 5,
+        "description": "The Bio filters have a structure of dense holes where live a lot of nitro.", 
+        "price": 15.99,
+        "image": "33.jpg"
+    },
+    {
+        "id": 34,
+        "name": "JUWEL Aquarium Automatic Fish Feeder",
+        "category" : 2,
+        "petCategory": 5,
+        "description": " Aquarium Automatic Fish Feeder LCD Digital Timer Device", 
+        "price": 58.99,
+        "image": "34.jpg"
+    },
+    {
+        "id": 35,
+        "name": "JOY Fish Training Stick",
+        "category" : 1,
+        "petCategory": 2,
+        "description": "  Fish Training Stick for Fish, Fish Training Wand Accessory", 
+        "price": 3.99,
+        "image": "35.jpg"
+    }
+]
