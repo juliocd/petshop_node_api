@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+import moment = require("moment");
 import { IAppointment } from "../models/IAppointment";
+import { IPet } from "../models/IPet";
 
 // Importing the module 
 const express=require("express") 
@@ -19,9 +21,31 @@ fs.readFile(filePath, (err, data: any) => {
         appointmentList = JSON.parse(data);
     }
 })
+
+const petsFilePath = path.join(`${__dirname}/../data/`, 'pets.json');
+let petsList: IPet[] = [];
+
+fs.readFile(petsFilePath, (err, data: any) => {
+    if (err) {
+        console.error("Unable to open pet file : " + petsFilePath);
+    } else {
+        petsList = JSON.parse(data);
+    }
+})
   
 // Return all appointments
 router.get("/", (req, resp) => {
+    if (req.query.phoneNumber) {
+        let appointments = appointmentList.filter(a => a.phoneNumber == req.query.phoneNumber);
+
+        appointments.map(appointment => {
+            appointment.petName = petsList.find(pet => pet.id == appointment.petId)?.breed || '';
+        })
+
+        resp.status(200);
+        return resp.json(appointments);
+    }
+
     resp.status(200);
     return resp.json(appointmentList);
 });
@@ -29,7 +53,7 @@ router.get("/", (req, resp) => {
 // Return appointment by id
 router.get("/:id", (req, resp) => {
     if (req.params.id) {
-        const appointment = appointmentList.find(c => c.id == req.params.id);
+        const appointment = appointmentList.find(a => a.id == req.params.id);
         if (appointment) {
             resp.status(200);
             return resp.json(appointment);
@@ -105,6 +129,21 @@ router.post("/", (req, resp) => {
         return resp.json({error: 'Invalid petId'})
     }
 
+    const compareDate = moment(appointmentDate + ' ' + appointmentTime, "MM/DD/YYYY HH:mm:ss");
+    const appointmentByPhone = appointmentList.find(a => {
+        const startDate = moment(a.appointmentDate + ' ' + a.appointmentTime, "MM/DD/YYYY HH:mm:ss").subtract(1, 'second');
+        const endDate = moment(a.appointmentDate + ' ' + a.appointmentTime, "MM/DD/YYYY HH:mm:ss").add(1, 'hour');
+
+        return a.phoneNumber == phoneNumber && a.petId == petId && compareDate.isBetween(startDate, endDate);
+    });
+
+    if (appointmentByPhone) {
+        resp.status(200);
+        return resp.json({
+            error: 'You already have an appointment booked for this pet'
+        });
+    }
+
     const id = appointmentList.length > 0 ? appointmentList[appointmentList.length - 1].id + 1 : 1;
 
     const appointment:IAppointment = {
@@ -174,6 +213,25 @@ router.put("/:id", (req, resp) => {
             return resp.json({error: `Appointment with id:${req.params.id} not found.`});
         }
 
+        const compareDate = moment(appointmentUpdated.appointmentDate + ' ' + appointmentUpdated.appointmentTime, "MM/DD/YYYY HH:mm:ss");
+        const appointmentByPhone = appointmentList.find(a => {
+            const startDate = moment(a.appointmentDate + ' ' + a.appointmentTime, "MM/DD/YYYY HH:mm:ss").subtract(1, 'second');
+            const endDate = moment(a.appointmentDate + ' ' + a.appointmentTime, "MM/DD/YYYY HH:mm:ss").add(1, 'hour');
+    
+            return appointmentUpdated 
+                && a.id != appointmentUpdated.id 
+                && a.phoneNumber == appointmentUpdated.phoneNumber 
+                && a.petId == appointmentUpdated.petId 
+                && compareDate.isBetween(startDate, endDate);
+        });
+    
+        if (appointmentByPhone) {
+            resp.status(200);
+            return resp.json({
+                error: 'You already have an appointment booked for this pet'
+            });
+        }
+
         resp.status(200);
         return resp.json(appointmentUpdated);
     }
@@ -182,9 +240,9 @@ router.put("/:id", (req, resp) => {
 // Delete appointment by id
 router.delete("/:id", (req, resp) => {
     if (req.params.id) {
-        const appointment = appointmentList.find(c => c.id == req.params.id);
+        const appointment = appointmentList.find(a => a.id == req.params.id);
         if (appointment) {
-            appointmentList = appointmentList.filter(c => c.id != req.params.id);
+            appointmentList = appointmentList.filter(a => a.id != req.params.id);
             resp.status(200);
             return resp.json({success: true});
         }

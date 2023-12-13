@@ -9,4 +9,5 @@ export interface IAppointment {
     appointmentDate: string;
     appointmentTime: string;
     petId: number;
+    petName?: string;
 }
